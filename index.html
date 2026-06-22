@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Report Card — How Secure Are You?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="grid-backdrop"></div>
+
+  <main class="screen">
+
+    <!-- ============ INTRO SCREEN ============ -->
+    <section class="card" id="intro-screen">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">security_audit.exe</span>
+      </div>
+
+      <div class="card-body intro-body">
+        <p class="eyebrow">// SYSTEM DIAGNOSTIC</p>
+        <h1>How secure is<br>your digital life?</h1>
+        <p class="lede">Run a 5-question audit on your everyday habits. Get a real letter grade — A+ to F — and a fix-it list you can act on today.</p>
+
+        <ul class="meta-list">
+          <li><span class="meta-icon">⏱</span> Takes about 60 seconds</li>
+          <li><span class="meta-icon">🔒</span> Nothing leaves your browser</li>
+          <li><span class="meta-icon">▣</span> 5 questions, no sign-up</li>
+        </ul>
+
+        <button class="btn-primary" id="start-btn">Run the audit <span class="arrow">→</span></button>
+      </div>
+    </section>
+
+    <!-- ============ QUIZ SCREEN ============ -->
+    <section class="card hidden" id="quiz-screen">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">security_audit.exe</span>
+        <span class="progress-tag" id="progress-tag">[1/5]</span>
+      </div>
+
+      <div class="card-body">
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <p class="eyebrow" id="question-category">// LOGIN SECURITY</p>
+        <h2 id="question-text">Question loading…</h2>
+
+        <div class="options" id="options-container"></div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTS SCREEN ============ -->
+    <section class="card hidden" id="results-screen">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">security_audit.exe</span>
+        <span class="progress-tag">[done]</span>
+      </div>
+
+      <div class="card-body results-body">
+        <p class="eyebrow">// AUDIT COMPLETE</p>
+
+        <div class="grade-panel">
+          <div class="scan-line"></div>
+          <span class="grade-label">YOUR GRADE</span>
+          <div class="grade-letter" id="grade-letter">—</div>
+          <div class="grade-score" id="grade-score">0 / 0 pts</div>
+        </div>
+
+        <p class="grade-summary" id="grade-summary"></p>
+
+        <div class="report-section">
+          <p class="eyebrow">// RECOMMENDED FIXES</p>
+          <ul class="fix-list" id="fix-list"></ul>
+        </div>
+
+        <div class="results-actions">
+          <button class="btn-secondary" id="retry-btn">Run again</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
